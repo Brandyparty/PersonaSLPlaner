@@ -3,6 +3,8 @@
 #include "qfile.h"
 #include "qtextstream.h"
 #include "qdir.h"
+#include "sociallink.h"
+#include <vector>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -111,11 +113,81 @@ void MainWindow::p4g() {
 }
 
 void MainWindow::p3fes() {
-    //1. Create Social Link Data
+    //Get Calendar
+    QString calendar_file_name = "input/Persona3FESTTday";
+    QFile file;
+    file.setFileName(calendar_file_name +".txt");//file_name is the QString, which I get as aparameter
+    file.open(QIODevice::ReadOnly | QIODevice::Text);
+    QTextStream calendar(&file);
+    QString linestring;
+    QString headerline;
+    QString amountOfdaysline;
 
-    //2. Day to Day
+    headerline = calendar.readLine();
+    amountOfdaysline = calendar.readLine();
 
-    //3. Output
+    QStringList headersplit = headerline.split(";");
+    QStringList amountOfdayslinesplit = amountOfdaysline.split(";");
+
+    //QTextStream(stdout) << calendar_file_name; //To see the name of the file, which has just been typed
+    file.close();
+
+    printf("header:");
+    qDebug("%s", qUtf8Printable(headerline));
+    printf("amountofdays:");
+    qDebug("%s", qUtf8Printable(amountOfdaysline));
+
+    qDebug("%s", qUtf8Printable("Begin SLs"));
+    std::vector<SocialLink> sociallinks;
+    for (int i = 3; i < headersplit.length(); i++) {
+        SocialLink sl = SocialLink(headersplit[i].toStdString().c_str(), amountOfdayslinesplit[i].toInt());
+        if(headersplit[i].split("<").length() > 1) {
+            //qDebug("%s", qUtf8Printable(headersplit[i].split("<")[1]));
+            qDebug("%s", qUtf8Printable(headersplit[i]+":has <"));
+            int length = headersplit[i].split(">").length();
+            //qDebug("%s", qUtf8Printable(headersplit[i].split("<")[length]));
+            int rank = headersplit[i].split("<")[length].toInt();
+            sl.setMaxRank(rank);
+        }
+        if(headersplit[i].split(">").length() > 1) {
+            qDebug("%s", qUtf8Printable(headersplit[i]+":has >"));
+            int length = headersplit[i].split(">").length();
+            int rank = headersplit[i].split(">")[length-1].toInt();
+            sl.setRank(rank);
+            sl.setlinkToStart(headersplit[i].split(">")[0].toStdString().c_str(), rank);
+        }
+        //qDebug("%s", qUtf8Printable(headersplit[i]+":"+amountOfdayslinesplit[i]+":"+rank.c_str()));
+        qDebug("%s", "</Link>");
+
+        sociallinks.push_back(sl);
+    }
+    qDebug("%s", qUtf8Printable("End SLs"));
+
+    /*
+    for (int i = 3; i < amountOfdayslinesplit.length(); i++) {
+        qDebug("%s", qUtf8Printable(amountOfdayslinesplit[i]));
+    }
+    */
+
+
+
+
+
+
+    //Create Social Link Data
+
+    //Day to Day
+
+    //Output
+    /*
+    QString file_name = "p4gSL";
+    file.setFileName(file_name +".txt");//file_name is the QString, which I get as aparameter
+    file.open(QIODevice::ReadWrite | QIODevice::Text);
+    QTextStream stream(&file);
+    stream<<"Create Document";
+    QTextStream(stdout) << file_name; //To see the name of the file, which has just been typed
+    file.close();
+    */
 }
 
 void MainWindow::on_generateButton_clicked()

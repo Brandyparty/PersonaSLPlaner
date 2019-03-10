@@ -1,0 +1,6 @@
+Tower - Shu Nakajima
+evening, sunny, nodate
+Tu, Th, Sa
+25.05
+0, 0, 2, 6, 3, 5, 5, 4, 4, 0
+0, 0, 0, 0, 0, 0, 2, 1, 0, 0

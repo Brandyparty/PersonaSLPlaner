@@ -1,0 +1,7 @@
+Hermit - Fox
+day, allweather, nodate
+Mo, Tu, We, Th, Fr, Sa, Su
+05.05
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Extra: Quests take time!

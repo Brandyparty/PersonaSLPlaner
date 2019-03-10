@@ -1,0 +1,6 @@
+Hanged - Naoki Konishi
+day, sunny, nodate
+Mo, Tu, We, Th
+08.06
+0, 0, 0, 4, 4, 4, 4, 4, 6, 6
+0, 0, 0, 0, 0, 1, 1, 0, 3, 0

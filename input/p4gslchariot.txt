@@ -1,0 +1,9 @@
+Chariot - Chie Satonaka
+day, sunny, date
+Mo, Tu, Th, Sa
+18.04
+0, 0, 3, 3, 4, 4, 6, 5, 6, 10
+0, 0, 0, 0, 0, 0, 0, 3, 3, 7
+Events:
+2: 07.05, 18.06, 17.12
+3: 17.06

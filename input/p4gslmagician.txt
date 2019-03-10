@@ -1,0 +1,8 @@
+Magician - Yosuke Hanamura
+day, sunny, nodate
+Mo, Th, Fr, Sa, Su
+16.04
+0, 0, 2, 3, 4, 4, 6, 6, 4, 8
+0, 0, 0, 0, 0, 0, 0, 6, 4, 3
+Events:
+3: 22.06, 21.12

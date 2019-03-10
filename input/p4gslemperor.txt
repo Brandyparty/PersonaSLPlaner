@@ -1,0 +1,6 @@
+Emperor - Kanji Tatsumi
+day, sunny, nodate
+We, Th, Sa, Su
+09.06
+0, 0, 2, 2, 4, 6, 4, 5, 6, 6
+0, 0, 0, 2, 0, 3, 4, 2, 0, 0

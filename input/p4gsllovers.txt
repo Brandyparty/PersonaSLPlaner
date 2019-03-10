@@ -1,0 +1,9 @@
+Lovers - Rise Kujikawa
+day, sunny, date
+Fr, Sa, Su
+23.07
+0, 0, 2, 4, 6, 6, 6, 8, 6, 9
+0, 0, 0, 1, 0, 0, 0, 2, 6, 6
+Events:
+2: 30.10
+3: 23.08, 30.08

@@ -1,0 +1,10 @@
+Strength - Kou & Daisuke
+day, sunny, nodate
+Mo, Tu, We, Sa, Su
+19.04
+-Basketball:
+0, 0, 6, 6, 6, 4, 0, 5, 7, 6
+0, 0, 0, 0, 2, 0, 0, 5, 1, 0
+-Soccer:
+0, 0, 4, 2, 3, 2, 4, 0, 6, 6
+0, 0, 2, 2, 1, 0, 1, 0, 0, 3
