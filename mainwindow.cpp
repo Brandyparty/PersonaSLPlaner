@@ -177,7 +177,20 @@ void MainWindow::p3fes() {
     //Create Social Link Data
 
     //Day to Day
+    int i = 0;
+    while(!calendar.atEnd()) {
+        QString line = calendar.readLine();
+        QStringList dayparts = line.split(";");
+        i++;
+        if(i > 230) {
+            qDebug("%s", qUtf8Printable(dayparts[0]));
+        }
 
+    }
+    qDebug("%d", i);
+
+
+    file.close();
     //Output
     /*
     QString file_name = "p4gSL";
@@ -200,7 +213,7 @@ void MainWindow::on_generateButton_clicked()
     QString gamechoice = ui->GameChoice->currentItem()->text();
     if(gamechoice == "Persona 4 Golden") {
         MainWindow::p4g();
-    } else if(gamechoice == "Persona 3 FES"){
+    } else if(gamechoice == "Persona 3 FES / Portable (male)"){
         MainWindow::p3fes();
     }
 }
